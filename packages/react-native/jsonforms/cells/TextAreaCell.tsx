@@ -1,29 +1,29 @@
 import {
-    CellProps,
-    isMultiLineControl,
-    RankedTester,
-    rankWith,
-} from "@jsonforms/core";
-import { withJsonFormsCellProps } from "@jsonforms/react";
-import React from "react";
-import { TextField } from "react-native-material-textfield";
+  CellProps,
+  isMultiLineControl,
+  RankedTester,
+  rankWith
+} from '@jsonforms/core';
+import { withJsonFormsCellProps } from '@jsonforms/react';
+import React from 'react';
+import { TextField } from 'rn-material-ui-textfield';
 
 export const TextAreaCell = (props: CellProps) => {
-    const { data, enabled, uischema, path, handleChange } = props;
+  const { data, enabled, uischema, path, handleChange } = props;
 
-    const onChange = (value: string) => {
-        handleChange(path, value);
-    };
+  const onChange = (value: string) => {
+    handleChange(path, value);
+  };
 
-    return (
-        <TextField
-            value={data || ""}
-            onChangeText={onChange}
-            editable={enabled}
-            autoFocus={uischema.options && uischema.options.focus}
-            multiline={true}
-        />
-    );
+  return (
+    <TextField
+      value={data || ''}
+      onChangeText={onChange}
+      editable={enabled}
+      autoFocus={uischema.options && uischema.options.focus}
+      multiline={true}
+    />
+  );
 };
 
 /**

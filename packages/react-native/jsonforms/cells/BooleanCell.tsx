@@ -1,29 +1,29 @@
 import {
-    CellProps,
-    isBooleanControl,
-    RankedTester,
-    rankWith,
-} from "@jsonforms/core";
-import { withJsonFormsCellProps } from "@jsonforms/react";
-import React from "react";
-import { Checkbox } from "react-native-material-ui";
+  CellProps,
+  isBooleanControl,
+  RankedTester,
+  rankWith
+} from '@jsonforms/core';
+import { withJsonFormsCellProps } from '@jsonforms/react';
+import React from 'react';
+import { Checkbox } from 'react-native-material-ui';
 
 export const BooleanCell = (props: CellProps) => {
-    const { data, enabled, path, handleChange } = props;
+  const { data, enabled, path, handleChange } = props;
 
-    const onChange = () => {
-        handleChange(path, !data);
-    };
+  const onChange = () => {
+    handleChange(path, !data);
+  };
 
-    return (
-        <Checkbox
-            label=""
-            value={path}
-            checked={!!data}
-            onCheck={onChange}
-            disabled={!enabled}
-        />
-    );
+  return (
+    <Checkbox
+      label=''
+      value={path}
+      checked={!!data}
+      onCheck={onChange}
+      disabled={!enabled}
+    />
+  );
 };
 
 /**

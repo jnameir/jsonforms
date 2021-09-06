@@ -1,0 +1,9 @@
+{
+  "type": "object",
+  "properties": {
+    "boolean": {
+      "type": "boolean"
+    }
+  },
+  "required": ["boolean"]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "object",
+  "properties": {
+    "dateTime": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["dateTime"]
+}
