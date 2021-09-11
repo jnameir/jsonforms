@@ -1,6 +1,6 @@
 import { JsonSchema, UISchemaElement } from '@jsonforms/core';
 import { JsonForms } from '@jsonforms/react';
-import { isEmpty } from 'lodash';
+import { isEmpty, isEqual } from 'lodash';
 import React, { useState } from 'react';
 import {
   Button,
@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 import { RNCells, RNRenderers } from './jsonforms';
-import { schemas, uiSchemas } from './src/schemas';
+import { schemas, uiSchemas } from './schemas';
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
 
 export const App = (): JSX.Element => {
@@ -26,7 +26,7 @@ export const App = (): JSX.Element => {
   const onChange = ({ errors, data }) => {
     // const cleanedData = formatKbsData(data);
 
-    if (isEmpty(errors)) {
+    if (isEmpty(errors) || !isEqual(data, stateData)) {
       setStateData(data);
       setStateErrors(errors);
     } else {
@@ -47,8 +47,8 @@ export const App = (): JSX.Element => {
         <Button title={'Boolean'} onPress={() => onChangeSchema('boolean')} />
         <Button title={'Date'} onPress={() => onChangeSchema('date')} />
         <Button title={'DateTime'} onPress={() => onChangeSchema('dateTime')} />
-        <Button title={'Enum'} onPress={() => onChangeSchema('enum')} />
-        <Button title={'Integer'} onPress={() => onChangeSchema('tnteger')} />
+        <Button title={'Enum'} onPress={() => onChangeSchema('enums')} />
+        <Button title={'Integer'} onPress={() => onChangeSchema('integer')} />
         <Button
           title={'multiEnum'}
           onPress={() => onChangeSchema('multiEnum')}
