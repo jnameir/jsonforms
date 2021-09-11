@@ -10,6 +10,7 @@ import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import { twoDigits } from '../util';
 import { TextField } from 'rn-material-ui-textfield';
 import { TouchableOpacity } from 'react-native';
+import moment from 'moment';
 
 export const TimeCell = (props: CellProps) => {
   const { data, path, handleChange } = props;
@@ -19,6 +20,11 @@ export const TimeCell = (props: CellProps) => {
   const onToggle = () => {
     setShow(!show);
   };
+
+  const currentDate = new Date();
+  const currentTime = `${twoDigits(currentDate.getHours())}:${twoDigits(
+    currentDate.getMinutes()
+  )}`;
 
   const onChange = (event: Event, time: Date) => {
     if (time !== undefined) {
@@ -35,14 +41,16 @@ export const TimeCell = (props: CellProps) => {
       {show && (
         <DateTimePicker
           onChange={onChange}
-          value={data || ''}
+          value={moment(currentDate)
+            .startOf(data || currentTime)
+            .toDate()}
           mode='time'
           is24Hour={true}
           display='default'
         />
       )}
       <TouchableOpacity onPress={onToggle}>
-        <TextField value={data} disabled={true} />
+        <TextField value={data || currentTime} disabled={true} />
       </TouchableOpacity>
     </>
   );
