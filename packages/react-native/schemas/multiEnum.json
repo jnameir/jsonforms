@@ -1,9 +1,18 @@
 {
   "type": "object",
   "properties": {
-    "integer": {
-      "type": "integer"
+    "multienum": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "One",
+          "Two",
+          "Three"
+        ]
+      }
     }
   },
-  "required": ["integer"]
+  "required": [
+    "multienum"
+  ]
 }

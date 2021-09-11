@@ -3,7 +3,10 @@
   "elements": [
     {
       "type": "Control",
-      "scope": "#/properties/numberFormat"
+      "scope": "#/properties/textArea",
+      "options": {
+        "multi": true
+      }
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "type": "object",
   "properties": {
-    "textArea": {
+    "text": {
       "type": "string"
     }
   },
-  "required": ["textArea"]
+  "required": ["text"]
 }

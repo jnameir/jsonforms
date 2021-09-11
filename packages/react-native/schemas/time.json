@@ -1,9 +1,10 @@
 {
   "type": "object",
   "properties": {
-    "textArea": {
-      "type": "string"
+    "time": {
+      "type": "string",
+      "format": "time"
     }
   },
-  "required": ["textArea"]
+  "required": ["time"]
 }

@@ -3,7 +3,7 @@
   "properties": {
     "numberFormat": {
       "type": "integer",
-      "format": true
+      "format": "date"
     }
   },
   "required": ["numberFormat"]

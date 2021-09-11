@@ -1,10 +1,9 @@
 {
   "type": "object",
   "properties": {
-    "numberFormat": {
-      "type": "integer",
-      "format": "date"
+    "textArea": {
+      "type": "string"
     }
   },
-  "required": ["numberFormat"]
+  "required": ["textArea"]
 }
