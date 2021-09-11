@@ -1225,6 +1225,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.1.0.tgz#e42b1bef12d2415411519fd528e64b593b1363dc"
   integrity sha512-W/J0fNYVO01tioHjvYWQ9m6RgndVtbElzYozBq1ZPrHO/iCzlqoySHl4gO/fpCl9QEFjvJfjPgtPMTMlsoq5DQ==
 
+"@react-native-picker/picker@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@react-native-picker/picker/-/picker-2.0.0.tgz#579e204248476e9f53df4a5588648527a186de39"
+  integrity sha512-Z5HN7pmA6HGBHNaBDWMPh3ViD0kEHBy8FQNeUnqi9bzk4sH4FyurT6qFgBSnD0mPLi1IREZKGr5evGTXDdLUjA==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.3.tgz#3802ddd21a50a949b6721ddd72da36e67e7f1b2d"
@@ -1371,6 +1376,14 @@
   version "1.32.3"
   resolved "https://registry.yarnpkg.com/@types/react-native-material-ui/-/react-native-material-ui-1.32.3.tgz#2cb5d05009ac8aa4efc30f2f2f00e065b840a565"
   integrity sha512-pWd4rdExrArdS0AvKVb+3qKFn6oaDgFXpgWyd5k715Ox09qXTfTxlrNBD/CNRUQi8nzpdqryFhvj+HBRXHru4w==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+
+"@types/react-native-vector-icons@^6.4.8":
+  version "6.4.8"
+  resolved "https://registry.yarnpkg.com/@types/react-native-vector-icons/-/react-native-vector-icons-6.4.8.tgz#7dd9740f36a71e98c484b9ea12155940c85cedc2"
+  integrity sha512-ImqhwVPHtcWrfwaS4vVrnN/C1mY50+Gjer4wMltUJlkt9pTJ5WXCyn8VFPmxC5h8Zy0DBN2tYdusBZ2xJP14OA==
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
