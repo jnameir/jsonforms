@@ -24,12 +24,12 @@ export const DateTimeCell = (props: CellProps) => {
     setDate(currentDate);
   };
 
-  const showDatepicker = () => {
+  const showDatePicker = () => {
     setVisible(true);
     setMode('date');
   };
 
-  const showTimepicker = () => {
+  const showTimePicker = () => {
     setVisible(true);
     setMode('time');
   };
@@ -46,8 +46,8 @@ export const DateTimeCell = (props: CellProps) => {
         />
       )}
       <TextField value={date.toLocaleString()} />
-      <Button onPress={showDatepicker} text='Pick date' />
-      <Button onPress={showTimepicker} text='Pick time' />
+      <Button onPress={showDatePicker} text='Pick date' />
+      <Button onPress={showTimePicker} text='Pick time' />
     </>
   );
 };

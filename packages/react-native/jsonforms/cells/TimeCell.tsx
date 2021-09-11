@@ -5,33 +5,45 @@ import {
   rankWith
 } from '@jsonforms/core';
 import { withJsonFormsCellProps } from '@jsonforms/react';
-import React from 'react';
-import { TimePickerAndroid } from 'react-native';
-import { TextField } from 'rn-material-ui-textfield';
-import { Button } from 'react-native-material-ui';
+import React, { useState } from 'react';
+import DateTimePicker, { Event } from '@react-native-community/datetimepicker';
 import { twoDigits } from '../util';
+import { TextField } from 'rn-material-ui-textfield';
+import { TouchableOpacity } from 'react-native';
 
 export const TimeCell = (props: CellProps) => {
   const { data, path, handleChange } = props;
 
-  const onChange = async () => {
-    try {
-      const time = await TimePickerAndroid.open({
-        is24Hour: true
-      });
+  const [show, setShow] = useState(false);
 
-      if (time.action !== TimePickerAndroid.dismissedAction) {
-        handleChange(path, `${twoDigits(time.hour)}:${twoDigits(time.minute)}`);
-      }
-    } catch ({ code, message }) {
-      console.log('wrong time format');
+  const onToggle = () => {
+    setShow(!show);
+  };
+
+  const onChange = (event: Event, time: Date) => {
+    if (time !== undefined) {
+      handleChange(
+        path,
+        `${twoDigits(time.getHours())}:${twoDigits(time.getMinutes())}`
+      );
     }
+    setShow(!show);
   };
 
   return (
     <>
-      <TextField value={data} editable={false} />
-      <Button onPress={onChange} text='Pick time' />
+      {show && (
+        <DateTimePicker
+          onChange={onChange}
+          value={data || ''}
+          mode='time'
+          is24Hour={true}
+          display='default'
+        />
+      )}
+      <TouchableOpacity onPress={onToggle}>
+        <TextField value={data} disabled={true} />
+      </TouchableOpacity>
     </>
   );
 };

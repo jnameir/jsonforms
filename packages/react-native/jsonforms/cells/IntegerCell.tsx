@@ -8,12 +8,19 @@ import { withJsonFormsCellProps } from '@jsonforms/react';
 import merge from 'lodash/merge';
 import React from 'react';
 import { TextField } from 'rn-material-ui-textfield';
+import { isEmpty } from 'lodash';
 
 export const IntegerCell = (props: CellProps) => {
   const { config, data, enabled, uischema, schema, path, handleChange } = props;
 
   const onChange = (value: string) => {
-    handleChange(path, parseInt(value));
+    const numberValue = Number(value);
+
+    if (isNaN(numberValue)) {
+      return;
+    }
+
+    handleChange(path, isEmpty(value) ? '' : Number(value));
   };
 
   const { maxLength } = schema;
@@ -21,7 +28,7 @@ export const IntegerCell = (props: CellProps) => {
 
   return (
     <TextField
-      value={data?.toString() || ''}
+      value={isEmpty(data?.toString()) ? '' : data.toString()}
       onChangeText={onChange}
       editable={enabled}
       autoFocus={appliedUiSchemaOptions.focus}
