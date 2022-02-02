@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@jsonforms/core": "^2.5.2",
+    "react-native-syntax-highlighter": "^2.1.0",
     "@jsonforms/react": "^2.5.2",
     "@react-native-picker/picker": "^2.2.1",
     "@react-native-community/datetimepicker": "^3.5.2",
