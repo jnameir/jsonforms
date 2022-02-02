@@ -82,7 +82,8 @@ const styles = StyleSheet.create({
   jsonFormsContainer: {
     width: '100%',
     height: '50%',
-    padding: 80
+    padding: 80,
+    marginBottom: 80,
   },
   infoWrapper: {
     width: '100%',
