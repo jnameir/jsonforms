@@ -9,8 +9,8 @@ import {
     View
 } from 'react-native';
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
-import demoSchema from "./exampleSchemas/schema.json";
-import demoUiSchema from "./exampleSchemas/uiSchema.json";
+import demoSchema from "./demoSchemas/schema.json";
+import demoUiSchema from "./demoSchemas/uiSchema.json";
 import { RNCells, RNRenderers } from './jsonforms';
 
 export const App = (): JSX.Element => {
@@ -28,19 +28,17 @@ export const App = (): JSX.Element => {
 
   return (
     <SafeAreaView style={styles.wrapper}>
-      <View style={styles.navBar}>
-        
-      </View>
-      <View style={styles.jsonFormsContainer}>
-        <JsonForms
-          schema={demoSchema}
-          uischema={demoUiSchema}
-          data={stateData}
-          renderers={RNRenderers}
-          cells={RNCells}
-          onChange={onChange}
-        />
-      </View>
+        <View style={styles.jsonFormsContainer}>
+            <Text style={styles.title}>Example questionnaire</Text>
+            <JsonForms
+            schema={demoSchema}
+            uischema={demoUiSchema}
+            data={stateData}
+            renderers={RNRenderers}
+            cells={RNCells}
+            onChange={onChange}
+            />
+        </View>
       <View style={styles.infoWrapper}>
         <View>
           <Text style={styles.title}>Schema</Text>
@@ -83,8 +81,8 @@ const styles = StyleSheet.create({
   },
   jsonFormsContainer: {
     width: '100%',
-    height: '30%',
-    paddingTop: 50
+    height: '50%',
+    padding: 80
   },
   infoWrapper: {
     width: '100%',
@@ -98,16 +96,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'lightgray'
   },
   title: {
-    marginTop: 5,
+    marginTop: 10,
+    marginBottom: 10,
     fontWeight: 'bold',
-    color: 'gray'
+    color: '#11468F',
+    fontSize: 24,
   },
-  navBar: {
-    display: 'flex',
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-evenly'
-  }
 });
 
 export default App;
