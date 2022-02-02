@@ -1,64 +1,113 @@
-import { JsonForms } from "@jsonforms/react";
-import bind from 'bind-decorator';
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import exampleSchema from "./exampleSchemas/schema.json";
-import exampleUiSchema from "./exampleSchemas/uiSchema.json";
-import { RNCells, RNRenderers } from "./jsonforms";
+import { JsonForms } from '@jsonforms/react';
+import { isEmpty, isEqual } from 'lodash';
+import React, { useState } from 'react';
+import {
+    SafeAreaView,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
+import SyntaxHighlighter from 'react-native-syntax-highlighter';
+import demoSchema from "./exampleSchemas/schema.json";
+import demoUiSchema from "./exampleSchemas/uiSchema.json";
+import { RNCells, RNRenderers } from './jsonforms';
 
+export const App = (): JSX.Element => {
+  const [stateData, setStateData] = useState({});
+  const [stateErrors, setStateErrors] = useState([]);
 
-const initialData = {};
-interface State {
-    data: typeof initialData | any;
-    errors: [];
-}
-export default class App extends React.Component<unknown, State> {
-    constructor(props) {
-        super(props);
-        this.state = { data: {}, errors: [] };
+  const onChange = ({ errors, data }) => {
+    if (isEmpty(errors) || !isEqual(data, stateData)) {
+      setStateData(data);
+      setStateErrors(errors);
+    } else {
+      setStateErrors(errors);
     }
+  };
 
-    @bind
-    private onChange({ errors, data }) {
-        this.setState({ data, errors });
-    }
+  return (
+    <SafeAreaView style={styles.wrapper}>
+      <View style={styles.navBar}>
+        
+      </View>
+      <View style={styles.jsonFormsContainer}>
+        <JsonForms
+          schema={demoSchema}
+          uischema={demoUiSchema}
+          data={stateData}
+          renderers={RNRenderers}
+          cells={RNCells}
+          onChange={onChange}
+        />
+      </View>
+      <View style={styles.infoWrapper}>
+        <View>
+          <Text style={styles.title}>Schema</Text>
+          <ScrollView contentContainerStyle={styles.infoContainer}>
+            <SyntaxHighlighter language='json'>
+              {JSON.stringify(demoSchema, null, 2)}
+            </SyntaxHighlighter>
+          </ScrollView>
+          <Text style={styles.title}>UI schema</Text>
+          <ScrollView contentContainerStyle={styles.infoContainer}>
+            <SyntaxHighlighter language='json'>
+              {JSON.stringify(demoUiSchema, null, 2)}
+            </SyntaxHighlighter>
+          </ScrollView>
+        </View>
+        <View>
+          <Text style={styles.title}>Errors</Text>
+          <ScrollView contentContainerStyle={styles.infoContainer}>
+            <SyntaxHighlighter language='json'>
+              {JSON.stringify(stateErrors, null, 2)}
+            </SyntaxHighlighter>
+          </ScrollView>
+          <Text style={styles.title}>Data</Text>
+          <ScrollView contentContainerStyle={styles.infoContainer}>
+            <SyntaxHighlighter language='json'>
+              {JSON.stringify(stateData, null, 2)}
+            </SyntaxHighlighter>
+          </ScrollView>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+};
 
-    public render() {
-        return (
-            <View style={style.container}>
-                <View>
-                    <Text style={style.primTitle}>Example Questionnaire</Text>
-                    <JsonForms
-                        schema={exampleSchema}
-                        uischema={exampleUiSchema}
-                        data={this.state.data}
-                        renderers={RNRenderers}
-                        cells={RNCells}
-                        onChange={this.onChange}
-                    />
-                </View>
-                <View>
-                <Text style={style.primTitle}>Data</Text>
-                    <Text>{JSON.stringify(this.state.data, null, "\t")}</Text>
-                </View>
-            </View>
-        );
-    }
-}
+const styles = StyleSheet.create({
+  wrapper: {
+    padding: 10,
+    width: '100%',
+    justifyContent: 'center'
+  },
+  jsonFormsContainer: {
+    width: '100%',
+    height: '30%',
+    paddingTop: 50
+  },
+  infoWrapper: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  },
+  infoContainer: {
+    height: 200,
+    width: 300,
+    backgroundColor: 'lightgray'
+  },
+  title: {
+    marginTop: 5,
+    fontWeight: 'bold',
+    color: 'gray'
+  },
+  navBar: {
+    display: 'flex',
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  }
+});
 
-
-export const style = StyleSheet.create({
-    container: {
-        padding: 48,
-        display: "flex",
-        height: "100%",
-        backgroundColor: "#F1F1F1",
-    },
-    primTitle: {
-        fontSize: 24,
-        marginTop: 12,
-        marginBottom: 12,
-        fontWeight: "bold",
-        color: "#132C33",
-    },
-})
+export default App;
