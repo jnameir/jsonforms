@@ -2,7 +2,7 @@
     "type": "object",
     "properties": {
         "nursingServiceOperatingForMedicationApplication": {
-            "title": "Ist der Pflegedienst noch zur Medikamentengabe-/stellen tätig?",
+            "title": "Ist das Pflegepersonal noch zur Medikamentengabe-/stellen tätig?",
             "type": "string",
             "enum": [
                 "PD ist zuverlässig involviert",
@@ -14,7 +14,7 @@
             ]
         },
         "nursingServiceOperatingForInsulinProvision": {
-            "title": "Ist der Pflegedienst noch zur Insulingabe tätig?",
+            "title": "Ist das Pflegepersonal noch zur Insulingabe tätig?",
             "type": "string",
             "enum": [
                 "PD ist zuverlässig involviert",
@@ -26,7 +26,7 @@
             ]
         },
         "nursingServiceOperatingForCompressionStockings": {
-            "title": "Ist der Pflegedienst noch zum Kompressionsstrümpfe an-/ausziehen tätig?",
+            "title": "Ist das Pflegepersonal noch zum Kompressionsstrümpfe an-/ausziehen tätig?",
             "type": "string",
             "enum": [
                 "PD ist zuverlässig involviert",
@@ -38,7 +38,7 @@
             ]
         },
         "nursingServiceOperatingForWoundCare": {
-            "title": "Ist der Pflegedienst noch zum Verbandwechsel/zur Wundversorgung tätig?",
+            "title": "Ist das Pflegepersonal noch zum Verbandwechsel/zur Wundversorgung tätig?",
             "type": "string",
             "enum": [
                 "PD ist zuverlässig involviert",
@@ -50,7 +50,7 @@
             ]
         },
         "nursingServiceOperatingForOtherMatters": {
-            "title": "Ist der Pflegedienst noch zu Sonstigem tätig?",
+            "title": "Ist das Pflegepersonal noch zu Sonstigem tätig?",
             "type": "string",
             "enum": [
                 "PD ist zuverlässig involviert",
