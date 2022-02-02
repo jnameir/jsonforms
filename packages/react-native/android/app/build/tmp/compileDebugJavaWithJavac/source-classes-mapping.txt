@@ -1,0 +1,14 @@
+com/jsonformsrn/MainApplication.java
+ com.jsonformsrn.MainApplication
+ com.jsonformsrn.MainApplication$1
+com/jsonformsrn/ReactNativeFlipper.java
+ com.jsonformsrn.ReactNativeFlipper
+ com.jsonformsrn.ReactNativeFlipper$1
+ com.jsonformsrn.ReactNativeFlipper$2
+ com.jsonformsrn.ReactNativeFlipper$2$1
+com/jsonformsrn/BuildConfig.java
+ com.jsonformsrn.BuildConfig
+com/jsonformsrn/MainActivity.java
+ com.jsonformsrn.MainActivity
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

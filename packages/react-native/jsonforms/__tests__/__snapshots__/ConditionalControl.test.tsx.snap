@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JSONForms: ConditionalControl unit test success snapshot neutral 1`] = `
+<View
+  style={
+    Object {
+      "display": "flex",
+      "padding": 5,
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 16,
+      }
+    }
+  >
+    Ernährungszustand
+  </Text>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      pointerEvents="box-only"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+          },
+          undefined,
+          Object {
+            "flex": 0,
+            "minWidth": 200,
+          },
+        ]
+      }
+      testID={null}
+    >
+      <View
+        accessible={true}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        testID={null}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgb(0, 0, 0)",
+              "borderRadius": 21.6,
+              "height": 43.2,
+              "left": 2.3999999999999986,
+              "opacity": undefined,
+              "position": "absolute",
+              "top": 2.3999999999999986,
+              "transform": Array [
+                Object {
+                  "scale": undefined,
+                },
+              ],
+              "width": 43.2,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              },
+              Object {
+                "height": 48,
+                "width": 48,
+              },
+              undefined,
+            ]
+          }
+        >
+          <Text />
+        </View>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "flex": 1,
+              "marginLeft": 20,
+            },
+            undefined,
+            undefined,
+            false,
+          ]
+        }
+      >
+        gut
+      </Text>
+      <View
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.87)",
+              "bottom": 0,
+              "left": 0,
+              "opacity": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.87)",
+              "borderRadius": 100,
+              "height": 200,
+              "left": -100,
+              "opacity": undefined,
+              "position": "absolute",
+              "top": -100,
+              "transform": Array [
+                Object {
+                  "scale": undefined,
+                },
+              ],
+              "width": 200,
+              "zIndex": 1,
+            }
+          }
+        />
+      </View>
+    </View>
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onLayout={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      pointerEvents="box-only"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+          },
+          undefined,
+          Object {
+            "flex": 0,
+            "minWidth": 200,
+          },
+        ]
+      }
+      testID={null}
+    >
+      <View
+        accessible={true}
+        focusable={false}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        testID={null}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "rgb(0, 0, 0)",
+              "borderRadius": 21.6,
+              "height": 43.2,
+              "left": 2.3999999999999986,
+              "opacity": undefined,
+              "position": "absolute",
+              "top": 2.3999999999999986,
+              "transform": Array [
+                Object {
+                  "scale": undefined,
+                },
+              ],
+              "width": 43.2,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "height": 48,
+                "justifyContent": "center",
+                "width": 48,
+              },
+              Object {
+                "height": 48,
+                "width": 48,
+              },
+              undefined,
+            ]
+          }
+        >
+          <Text />
+        </View>
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "flex": 1,
+              "marginLeft": 20,
+            },
+            undefined,
+            undefined,
+            false,
+          ]
+        }
+      >
+        auffällig, weil...
+      </Text>
+      <View
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "bottom": 0,
+              "left": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.87)",
+              "bottom": 0,
+              "left": 0,
+              "opacity": undefined,
+              "position": "absolute",
+              "right": 0,
+              "top": 0,
+              "zIndex": 1,
+            }
+          }
+        />
+        <View
+          pointerEvents="none"
+          style={
+            Object {
+              "backgroundColor": "rgba(0, 0, 0, 0.87)",
+              "borderRadius": 100,
+              "height": 200,
+              "left": -100,
+              "opacity": undefined,
+              "position": "absolute",
+              "top": -100,
+              "transform": Array [
+                Object {
+                  "scale": undefined,
+                },
+              ],
+              "width": 200,
+              "zIndex": 1,
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+  <View />
+</View>
+`;

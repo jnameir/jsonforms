@@ -1,0 +1,105 @@
+{
+    "type": "Group",
+    "elements": [
+        {
+            "type": "Control",
+            "scope": "#/properties/nursingServiceOperatingForMedicationApplication",
+            "options": {
+                "format": "conditional",
+                "type": "enum",
+                "content": {
+                    "ja": [
+                        "PD ist zuverlässig involviert",
+                        "Bestehende Unzufriedenheit mit PD"
+                    ],
+                    "nein": [
+                        "PP hat Aufgabe übernommen",
+                        "Grund ist entfallen",
+                        "keine weitere VO durch Arzt",
+                        "Durchführung von privater PP"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Control",
+            "scope": "#/properties/nursingServiceOperatingForInsulinProvision",
+            "options": {
+                "format": "conditional",
+                "type": "enum",
+                "content": {
+                    "ja": [
+                        "PD ist zuverlässig involviert",
+                        "Bestehende Unzufriedenheit mit PD"
+                    ],
+                    "nein": [
+                        "PP hat Aufgabe übernommen",
+                        "Grund ist entfallen",
+                        "keine weitere VO durch Arzt",
+                        "Durchführung von privater PP"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Control",
+            "scope": "#/properties/nursingServiceOperatingForCompressionStockings",
+            "options": {
+                "format": "conditional",
+                "type": "enum",
+                "content": {
+                    "ja": [
+                        "PD ist zuverlässig involviert",
+                        "Bestehende Unzufriedenheit mit PD"
+                    ],
+                    "nein": [
+                        "PP hat Aufgabe übernommen",
+                        "Grund ist entfallen",
+                        "keine weitere VO durch Arzt",
+                        "Durchführung von privater PP"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Control",
+            "scope": "#/properties/nursingServiceOperatingForWoundCare",
+            "options": {
+                "format": "conditional",
+                "type": "enum",
+                "content": {
+                    "ja": [
+                        "PD ist zuverlässig involviert",
+                        "Bestehende Unzufriedenheit mit PD"
+                    ],
+                    "nein": [
+                        "PP hat Aufgabe übernommen",
+                        "Grund ist entfallen",
+                        "keine weitere VO durch Arzt",
+                        "Durchführung von privater PP"
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Control",
+            "scope": "#/properties/nursingServiceOperatingForOtherMatters",
+            "options": {
+                "format": "conditional",
+                "type": "enum",
+                "content": {
+                    "ja": [
+                        "PD ist zuverlässig involviert",
+                        "Bestehende Unzufriedenheit mit PD"
+                    ],
+                    "nein": [
+                        "PP hat Aufgabe übernommen",
+                        "Grund ist entfallen",
+                        "keine weitere VO durch Arzt",
+                        "Durchführung von privater PP"
+                    ]
+                }
+            }
+        }
+    ]
+}
