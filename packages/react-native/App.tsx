@@ -2,11 +2,11 @@ import { JsonForms } from '@jsonforms/react';
 import { isEmpty, isEqual } from 'lodash';
 import React, { useState } from 'react';
 import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    View
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
 } from 'react-native';
 import SyntaxHighlighter from 'react-native-syntax-highlighter';
 import demoSchema from "./demoSchemas/schema.json";

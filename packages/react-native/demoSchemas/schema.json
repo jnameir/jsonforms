@@ -36,37 +36,11 @@
                 "keine weitere VO durch Arzt",
                 "Durchführung von privater PP"
             ]
-        },
-        "nursingServiceOperatingForWoundCare": {
-            "title": "Ist das Pflegepersonal noch zum Verbandwechsel/zur Wundversorgung tätig?",
-            "type": "string",
-            "enum": [
-                "PD ist zuverlässig involviert",
-                "Bestehende Unzufriedenheit mit PD",
-                "PP hat Aufgabe übernommen",
-                "Grund ist entfallen",
-                "keine weitere VO durch Arzt",
-                "Durchführung von privater PP"
-            ]
-        },
-        "nursingServiceOperatingForOtherMatters": {
-            "title": "Ist das Pflegepersonal noch zu Sonstigem tätig?",
-            "type": "string",
-            "enum": [
-                "PD ist zuverlässig involviert",
-                "Bestehende Unzufriedenheit mit PD",
-                "PP hat Aufgabe übernommen",
-                "Grund ist entfallen",
-                "keine weitere VO durch Arzt",
-                "Durchführung von privater PP"
-            ]
         }
     },
     "required": [
         "nursingServiceOperatingForMedicationApplication",
         "nursingServiceOperatingForInsulinProvision",
-        "nursingServiceOperatingForCompressionStockings",
-        "nursingServiceOperatingForWoundCare",
-        "nursingServiceOperatingForOtherMatters"
+        "nursingServiceOperatingForCompressionStockings"
     ]
 }
