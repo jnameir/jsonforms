@@ -1,9 +1,10 @@
-import { render } from "@entyre/test-utilities";
 import { EnumCellProps } from "@jsonforms/core";
 import React from "react";
 import { View } from "react-native";
 import SectionedMultiSelect from "react-native-sectioned-multi-select";
 import { MultiEnumCell } from "../../jsonforms/cells/MultiEnumCell";
+import { render } from "../__helpers__/SimpleTestRenderer";
+
 
 const props: Partial<EnumCellProps> = {
     data: "",

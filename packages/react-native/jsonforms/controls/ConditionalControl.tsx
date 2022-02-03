@@ -6,12 +6,12 @@ import {
     isPlainLabel,
     optionIs,
     RankedTester,
-    rankWith,
+    rankWith
 } from "@jsonforms/core";
 import {
     Control,
     DispatchCell,
-    withJsonFormsControlProps,
+    withJsonFormsControlProps
 } from "@jsonforms/react";
 import bind from "bind-decorator";
 import merge from "lodash/merge";

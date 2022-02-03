@@ -13,6 +13,8 @@ import java.util.ArrayList;
 
 // @react-native-community/datetimepicker
 import com.reactcommunity.rndatetimepicker.RNDateTimePickerPackage;
+// @react-native-picker/picker
+import com.reactnativecommunity.picker.RNCPickerPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
 
@@ -61,6 +63,7 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RNDateTimePickerPackage(),
+      new RNCPickerPackage(),
       new VectorIconsPackage()
     ));
   }
